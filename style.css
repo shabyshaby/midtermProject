@@ -92,3 +92,7 @@ a:active{
         color: #2081C3;
 }
 
+@media screen and (max-width: 600px){
+        p{font-weight: normal;}
+        /*add general mobile functionality here*/
+}

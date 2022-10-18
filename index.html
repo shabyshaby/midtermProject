@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<head>
+        <style>
+                .largeButton{width: 400px; height: 100px; margin: 15px; font-size: 20px}
+                body{background-color: #2081C3}
+                div.home{margin: 0 auto; background-color: white; padding: 50px; width: 80%; height: 100%; display: block;}
+                p.home{text-align: center; margin: auto; max-width: 70%; margin-bottom: 25px}
+                table td{min-width: 300px;}
+                .thin{display: none}
+                
+                @media screen and (max-width: 1000px){
+                        .wide{
+                                display:none;
+                        }
+                        .thin{
+                                display:block;
+                        }
+                }
+        </style>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+</head>
+<body>
+<div class="home">
+<h1>
+        Welcome to Knowledge Lab
+</h1>
+<h2 style="text-align:center">
+        Reinvent learning with us.
+</h2>
+<p class = "home">
+        Knowledge Lab works with students to help them develop skills to succeed both in and out of the classroom. Using a wide range of teaching techniques, we cater our sessions to best fit the learning style of each student. <br/><br/> Our incredible staff work amazingly hard to develop a curriculum that can be adapted on an individualized basis. We make it easy for you to find the services you need with multiple locations, a wide range of subjects and grade levels, and both group and solo sessions.
+</p>
+<table style="margin:auto">
+        <tr>
+                <td><button class="largeButton">Book a Tutoring Session</button></td>
+                <td class="wide"><button class="largeButton">Meet Our Tutors</button></td>
+        </tr>
+        <tr class="thin">
+                <td class="thin"><button class="largeButton">Meet Our Tutors</button></td>
+        </tr>
+        <tr>
+                <td><button class="largeButton">See our Subjects</button></td>
+                <td class="wide"><button class="largeButton">See our Locations</button></td>
+        </tr>
+        <tr class="thin">
+                <td class="thin"><button class="largeButton">See our Locations</button></td>
+        </tr>
+</table>
+</div>
+</body>
+</html>
