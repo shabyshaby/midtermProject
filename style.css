@@ -30,6 +30,13 @@ form{
         font-family: Helvetica;
         margin-top: 50px;
 }
+
+.dropdown{
+        font-size: 14px;
+        color: #D5085C;
+        background-color: #ffcd17;
+        font-family: Helvetica;
+}
         
 button{
         color: #0F135E ;
