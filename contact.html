@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name=‘viewport’ content="width=device-width, initial-scale=1">
+        
+        <title>Contact Us</title>
+        
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <style media="screen">
+            
+            .textBox {
+                width: 20%;
+                
+                display: none;
+            }
+            
+            .message {
+                text-align:left;
+                
+            }
+            
+            textarea {
+                margin: 8px 0;
+                box-sizing: border-box;
+                background-color: #d0d5d9;
+                border: none;
+                border-bottom: 2px solid #0F135E;
+            }
+            
+        </style>
+        
+    </head>
+    
+    <body>
+        <form>
+            <p><label for="email">Your email:<br></label><input type="text" name="email" id="email" placeholder="example@gmail.com"></p>
+            <p><label for="subject">Subject:<br></label><select name="subject" id="subject" onchange="boxDisplay()">
+                <option value="default">Please select a subject</option>
+                <option>Question about subjects offered</option>
+                <option>Question about student accomdation</option>
+                <option>Question about booking sessions</option>
+                <option>Questions about tutors</option>
+                <option>General information</option>
+                <option value="other">Other</option>
+            </select></p>
+            <p><input type="text" class="textBox" name="other" id="other" placeholder="Subject"></p>
+            <p><label for="msg">Content:<br></label><textarea  rows="8" cols="80" class="message" type="text" name="msg" id="msg" placeholder="Message" style="width: 20%; height: 200px"></textarea></p>
+            <p><input type="button" name="submit" value="Send" id="submit" onclick="submitresult()"></p>
+                        
+        </form>
+        
+        <script type="text/javascript">
+            
+            function boxDisplay() {
+                
+                if (document.getElementById("subject").value === "other") {
+                    document.getElementById("other").style.display = "block";
+                } else {
+                    document.getElementById("other").style.display = "none";
+                }
+            }
+            
+            
+            
+            function submitresult() {
+                
+                if (!((document.getElementById("email").value.includes("@")) && (document.getElementById("email").value.includes(".")))) {
+                    alert("Please enter a valid email address");
+                } else if (document.getElementById("msg").value === "") {
+                    alert("Please enter a message");
+                } else if ((document.getElementById("subject").value === "default")||((document.getElementById("other").style.display === "block")&&(document.getElementById("other").value === ""))) {
+                    alert("Please select enter a subject");
+                }
+                else {
+                    alert("Your email has been sent!");
+                    window.location.reload(true);
+                }
+            }
+            
+            
+            
+            
+        </script>
+        
+        
+    </body>
+</html>
