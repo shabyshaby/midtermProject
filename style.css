@@ -86,6 +86,7 @@ a.nav{
         size: 14px;
         font-weight: bold;
         display: inline-block;
+        text-decoration: none;
 }
 
 a{
@@ -96,7 +97,7 @@ a{
 }
         
 a:hover{
-        color: #0F135E;
+        color: #D5085C;
 }
 
 a:active{
