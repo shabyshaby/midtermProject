@@ -61,7 +61,8 @@ button:hover{
         font-weight: bold;
 }
         
-ul{
+ul.nav{
+        display: inline;
         
 }
 
@@ -85,7 +86,7 @@ a.nav{
         color: #ffcd17;
         size: 14px;
         font-weight: bold;
-        display: inline-block;
+        /* display: inline-block; */
         text-decoration: none;
 }
 
