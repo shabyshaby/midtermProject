@@ -31,11 +31,10 @@ form{
         margin-top: 50px;
 }
 
-.dropdown{
-        font-size: 14px;
-        color: #D5085C;
-        background-color: #ffcd17;
+option{
         font-family: Helvetica;
+        color: #0F135E;
+        background-color: #ffcd17;
 }
         
 button{
@@ -56,6 +55,10 @@ button:hover{
 .nav{
         background-color: #0F135E ;
         padding: 25px;
+        font-family: Helvetica;
+        color: #ffcd17;
+        size: 14px;
+        font-weight: bold;
 }
         
 ul{
@@ -82,6 +85,7 @@ a.nav{
         color: #ffcd17;
         size: 14px;
         font-weight: bold;
+        display: inline-block;
 }
 
 a{
