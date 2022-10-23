@@ -28,12 +28,31 @@
                 border-bottom: 2px solid #0F135E;
             }
             
+            @media screen and (max-width: 600px) {
+                
+            }
         </style>
         
     </head>
     
     <body>
-        <div id="box" style="text-align: center">
+        
+        <nav>
+            <div class="nav-links">
+                <ul class="nav">
+                    <li><a class="nav" href="index.html">Home</a></li>
+                    <li><a class="nav"href="contact.html">Contact Us</a></li>
+                    <li><a class="nav" href="registration.html">Register</a></li>
+                    <li><a class="nav"href="testimonials.html">Testimonials</a></li>
+                    <li><a class="nav" href="services.html">All Services</a></li>
+                    <div class="logo"><a href="index.html"><img src="Knowledge Lab.png"></a></div>
+                </ul>
+            </div>
+        </nav>
+        <br>
+        
+        <center><image src="gear.png" width="30px" alt="blue gear logo"/><image src="gear.png" width="30px" alt="blue gear logo"/><image src="gear.png" width="30px" alt="blue gear logo"/></center>
+        <div style="text-align: center">
             <form>
                 <p><label for="email">Your email:<br></label><input style="width:30%" type="text" name="email" id="email" placeholder="example@gmail.com"></p>
                 <p><label for="subject">Subject:<br></label><select style="width:30%" name="subject" id="subject" onchange="boxDisplay()">
@@ -45,13 +64,13 @@
                     <option>General information</option>
                     <option value="other">Other</option>
                 </select></p>
-                <p><input type="text" class="textBox" name="other" id="other" placeholder="Subject"></p>
+                <p><input type="text" class="textBox" name="other" id="other" placeholder="Subject" style="margin-left:auto; margin-right:auto"></p>
                 <p><label for="msg">Content:<br></label><textarea  rows="8" cols="100" type="text" name="msg" id="msg" placeholder="Message" style="width: 30%; height: 200px"></textarea></p>
                 <p><input type="button" name="submit" value="Send" id="submit" onclick="submitresult()"></p>
                             
             </form>
             
-            <center><image src="gear.png" width="30px" alt="blue gear logo"/><image src="gear.png" width="30px" alt="blue gear logo"/><image src="gear.png" width="30px" alt="blue gear logo"/></center>
+            
         </div>
         
         
@@ -60,7 +79,7 @@
             function boxDisplay() {
                 
                 if (document.getElementById("subject").value === "other") {
-                    $("#id").css("text-align", "center");
+                    
                     document.getElementById("other").style.display = "block";
                 } else {
                     document.getElementById("other").style.display = "none";

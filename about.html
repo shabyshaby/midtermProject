@@ -69,13 +69,61 @@
                 
             }
             
+            .slide {
+                height: 300px;
+            }
+            
+            @media screen and (max-width: 600px){
+                       .buttons {
+                           width: 30px;
+                           height: 30px;
+                       }
+                       
+                       .slide {
+                           max-width: 400px;
+                           height: 200px;
+                       }
+                       
+                       h3 {
+                           font-size: 16px;
+                       }
+                       
+                       .bioLabel {
+                           font-size: 12px;
+                       }
+               }
+               
+               @media screen and (max-width: 1000px) {
+                   h3 {
+                       font-size: 18px;
+                   }
+                   
+                   .bioLabel {
+                       font-size: 14px;
+                   }
+               }
+            
             
         </style>
     </head>
     <body>
         
+        <nav>
+            <div class="nav-links">
+                <ul class="nav">
+                    <li><a class="nav" href="index.html">Home</a></li>
+                    <li><a class="nav"href="contact.html">Contact Us</a></li>
+                    <li><a class="nav" href="registration.html">Register</a></li>
+                    <li><a class="nav"href="testimonials.html">Testimonials</a></li>
+                    <li><a class="nav" href="services.html">All Services</a></li>
+                    <div class="logo"><a href="index.html"><img src="Knowledge Lab.png"></a></div>
+                </ul>
+            </div>
+        </nav>
+        <br>
+        
         <div class="slideshow">
-            <div><img id="img" src="images/IMG_1.png" style="height: 300px"></div>    
+            <div><img class="slide" id="img" src="images/IMG_1.png"></div>    
             <div class="bioLabel"><label for="img" id="bio"></label></div>
         </div>
         
@@ -106,7 +154,7 @@
                 $('#img').fadeOut(4000, function() {
                     idx++;
                     $("#bio").html(bios[idx % bios.length]).fadeIn(4000);
-                    $(this).attr('src', images[idx % images.length]).attr('height', 300).fadeIn(4000, fadeOutImg);
+                    $(this).attr('src', images[idx % images.length]).attr('max-height', 300).fadeIn(4000, fadeOutImg);
                 });
             }
             
