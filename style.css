@@ -114,7 +114,7 @@ div.footer{
 div.footer2{
         display: none;
         background-color: #0F135E;
-        margin: 0 auto;
+        margin-top: auto;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
@@ -124,6 +124,8 @@ div.footer2{
         width: 100%;
         height: 150px;
 }
+
+
 
 p.footer{
         color: #ffcd17;
@@ -145,6 +147,7 @@ input[type=text] {
 body{
         background-color: white;
         margin-left: 20px;
+        min-height: 100vh;
 }
 
 
