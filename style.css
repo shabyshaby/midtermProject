@@ -62,9 +62,10 @@ nav{
 }
 nav img{
         width:100px;
-        position: fixed; 
+        position: absolute; 
+        align: left;
         top: 8px;
-        left:8px;
+        left:20px;
         right:8px
 }
 .nav-links{
