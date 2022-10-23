@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+<script src="jquery-3.6.1.js"></script>
+<style type="type/css">
+    .session_cards {
+        margin-bottom:15px;
+    }
+    
+</style>
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-links">
+            <ul class="nav">
+                <li><a class="nav" href="index.html">Home</a></li>
+                <li><a class="nav" href="contact.html">Contact Us</a></li>
+                <li><a class="nav" href="registration.html">Register</a></li>
+                <li><a class="nav" href="testimonials.html">Testimonials</a></li>
+                <li><a class="nav" href="services.html">All Services</a></li>
+                <div class="logo"><a href="index.html"><img src="Knowledge Lab.png" style="position:static"></a></div>
+            </ul>
+        </div>
+    </nav>
+    <form action="#" style="text-align:center">
+        <div class="session_cards" style="margin-bottom:15px;" >
+            <label>First Name*</label>
+            <input type="text" name="fname">
+        </div>
+        <div class="session_cards" style="margin-bottom:15px;">
+            <label>Last Name*</label>
+            <input type="text" name="lname">
+        </div>
+        <div class="session_cards" style="margin-bottom:15px;">
+            <label>Email*</label>
+            <input type="email" name="email" placeholder="example@domain.com">
+        </div>
+        <div class="session_cards" style="margin-bottom:15px;">
+            <label>Phone Number*</label>
+            <input type="text" name="phone_num">
+        </div>
+        
+        <div class="session_cards" style="margin-bottom:15px;">
+            <label for="#">Subject:</label>
+            <select name="mon_wed_course" id="mon_wed">
+                <option value="default">Please select a topic</option>
+                <option value="pre_calc">Pre-Calculus</option>
+                <option value="calc">Calculus I</option>
+                <option value="calc_2">Calculus II</option>
+                <option value="chem">Chemistry</option>
+                <option value="bio">Biology</option>
+                <option value="linAlge">Linear Algebra</option>
+                <option value="comp_sci">Computer Science</option>
+                <option value="eng">English</option>
+            </select>
+        </div>
+
+        <div class="session_cards" style="margin-bottom:15px;">
+            <input type="radio" name="max_o_min0"> 1 hour and 15 Minute Session <span>&#64; &dollar;90</span>
+            <br />
+            <input type="radio" name="max_o_min0">45 Minute Session <span class="time">&#64; &dollar;40</span>
+        </div>
+
+        <div class="session_cards" style="margin-bottom:15px;">
+            <label for="#">Possible Dates: </label>
+            <select name="pick_date" id="work_week">
+            <option value="default">Please select a date</option>
+            <option value="mon" class="dates" ></option>
+            <option value="tue" class="dates"></option>
+            <option value="wed" class="dates"></option>
+            <option value="thur" class="dates"></option>
+            <option value="fri" class="dates"></option>
+            </select>
+        </div>
+
+        <button style="display:block; margin-top: 15px; margin-left:auto; margin-right:auto" value="false">
+            Book Session
+        </button>
+    </form>
+    <script>
+        function set_date(day_wanted) {
+            var today = new Date();
+            while(today.getDay() != day_wanted){
+                today.setDate(today.getDate() + 1);
+            }
+            return today.toString().substring(0,16);
+        }
+     var date_list = document.querySelectorAll('option[class="dates"]');
+     for (var k = 0; k < date_list.length; k++) {
+            date_list[k].innerHTML = set_date(k + 1);
+    }
+
+function validation() {
+        input_valid();
+        arr = [];
+        var check = false;
+        var select_list = document.querySelectorAll('select');
+        if(select_list[0].value === "default"){
+            arr.push("Please choose a subject");
+        }
+        if (select_list[1].value === "default") {
+            arr.push("Please choose a date");
+        }
+        var radio_list = document.querySelectorAll('input[type="radio"]');
+        for(var j = 0; j < radio_list.length; j++){
+            if(radio_list[j].checked === true){
+                check = true;
+            }
+        }
+        if(!check){
+            arr.push("Please pick a time");
+        }
+
+        if(arr.length != 0){
+            for(var m = 0; m < arr.length; m++){
+                alert(arr[m]);
+            }
+        }else{
+            alert("Thank you choosing Knowledge Lab!");
+            window.open("index.html");
+        }
+        
+}
+
+function input_valid() {
+        x = document.querySelectorAll('input');
+        var input_check = false;
+        for (var i = 0; i < x.length ; i++) {
+            if (x[i].value == "") {
+                input_check = true;
+            }
+        }
+        if (input_check) {
+            alert("Please enter the required field correctly");
+        }
+}
+
+    var btn = document.querySelector('button[value="false"]');
+    $(btn).click(function(){
+        validation();
+    });
+    </script>
+    <!-- ADD FOOTER WHEN IT IS CREATED -->
+
+</body>
+
+</html>
