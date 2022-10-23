@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name=‘viewport’ content="width=device-width, initial-scale=1">
+        
+        <title>About Us</title>
+        
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+            
+            
+            
+            var bios = [
+                "<h3><strong>Jarrod Joiner</strong> - <em>Math</em></h3>I'm a senior studying applied mathematics at USC. Knowledge lab is important to me because it allows me to connect with the next generation of passionate mathemeticians, and interact with so many people with different backgrounds! No matter the level, I am excited to help any student with anything they're struggling with in the classroom.", 
+                "<h3><strong>Karina Chen</strong> - <em>Chemistry</em></h3>I'm an analytical chemist working in the pharmaceutical industry. I enjoy working with Knowledge lab because it allows me to get young adults excited about the field that I've built my career around. I'm always happy to see new faces, as well as our returners from previous sessions!", 
+                "<h3><strong></strong>Ayesha Williams - <em>ELA</em></h3>I'm a first-year graduate student studying english at Washington State University. Tutoring through Knowledge Lab has been an amazing experience and I've met so many bright, young students along the way! Every session I learn something new, not just my students, so I look forward to going on that journey with them.", 
+                "<h3><strong>Chloe Yoon - </strong><em>Math</em></h3>I'm entering my 10th year as a Calculues professor at Duke University. I can never get enough time teaching, and working through Knowledge Lab allows me to better understand what my students need from me and how they learn effectively. I'm grateful for the opportunities to help others, and I'm always happy to be in the classroom.", 
+                "<h3><strong>Ella Austin - </strong><em>Biology</em></h3>I'm a second-year graduate student studying molecular biology at Penn State University. Knowledge Lab is great because I can connect with so many students and coworkers from different backgrounds. It's so much fun to get others interested in topics that I'm passionate about!",
+                "<h3><strong>Paul Noama - </strong><em>Computer Science</em></h3>I'm a junior studying computer engineering at UCLA. Knowledge Lab for me, is a place where I can let my creative side out and work on projects that I find interesting. Every student brings a different challenge, and I'm excited to work through those with them!",
+                "<h3><strong>Ron Lowry - </strong><em>ELA</em></h3>I'm a third-year PhD student studying at University of Louisiana at Lafayette. Tutoring through Knowledge Lab is always the highlight of the week because of all the bright, successful young minds that I meet. Every session reassures me that the future is in good hands!",
+                "<h3><strong>DeAndre Stephenson - </strong><em>Computer Science</em></h3>I'm a second-year graduate student studying computer science at Georgia Tech University. Knowledge Lab is a great resource for students to get help from experienced professionals, and also further explore fields they might be interested in the future. My sessions are always a good time!"
+            ];
+            
+            
+            
+        </script>
+        
+        <style media="screen">
+            
+            .buttonContainer {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .buttons {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .buttons:hover {
+                opacity: 0.6;
+            }
+            
+            .arrow {
+                
+                width: 60x;
+                height: 40px;
+                margin: 1%;
+                
+            }
+            
+            .slideshow {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .bioLabel {
+                margin: 1% 20%;
+                
+                
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        
+        <div class="slideshow">
+            <div><img id="img" src="images/IMG_1.png" style="height: 300px"></div>    
+            <div class="bioLabel"><label for="img" id="bio"></label></div>
+        </div>
+        
+        <div class="buttonContainer">
+            
+            <div><input class="buttons" type="image" name="start" id="start" src="play.png"onclick ="fadeOutImg()"></input></div>
+            <div><input class="buttons" type="image" name="stop" id="stop" src="pause.png" onclick="stopSlide()"></input></div>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script type="text/javascript">
+        
+            
+            $("#bio").html(bios[0]);
+            
+            var images = new Array("images/IMG_1.png","images/IMG_2.png", "images/IMG_3.png", 
+            "images/IMG_4.png", "images/IMG_5.png", "images/IMG_6.png", "images/IMG_7.png", "images/IMG_8.png");
+            
+            var idx = 0;
+            
+            
+            $(".btn").click(function() {
+                fadeOutImg();
+            });
+            
+            
+            function fadeOutImg() {
+                $('#img').fadeOut(4000, function() {
+                    idx++;
+                    $("#bio").html(bios[idx % bios.length]).fadeIn(4000);
+                    $(this).attr('src', images[idx % images.length]).attr('height', 300).fadeIn(4000, fadeOutImg);
+                });
+            }
+            
+        
+            
+            function stopSlide() {
+                $("#stop").click(function() {
+                    $("#img").stop();
+                    $("#bio").stop();
+                });
+                
+            }
+            
+        </script>
+            
+            
+        
+    </body>
+</html>
