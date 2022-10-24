@@ -18,6 +18,13 @@ p{
         font-weight: lighter;
 }
 
+h3{
+        size: 16px;
+        color: #0F135E ;
+        font-family: Helvetica;
+        font-weight: normal;
+}
+
 .center{
         display: block;
         margin-left: auto;
