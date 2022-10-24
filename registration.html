@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>  
+<head>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+</head>
+
+<body>
+    <nav>
+        <div class="logo"><a alt="logo" href="index.html" ><img id="fLogo" src="Knowledge Lab.png"></a></div>
+        <div class="nav-links">
+            <div class="toggle">
+                <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
+            </div>
+            <ul class="menu">
+                <li><a class="nav" href="index.html">Home</a></li>
+                <li><a class="nav" href="contact.html">Contact Us</a></li>
+                <li><a class="nav" href="courses.html">Courses</a></li>
+                <li><a class="nav" href="registration.html">Register</a></li>
+                <li><a class="nav" href="testimonials.html">Testimonials</a></li>
+                <li><a class="nav" href="about.html">About Us</a></li>
+                <li><a class="nav" href="locations.html">Our Locations</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".toggle").click(function(){
+                if($(".menu").hasClass("active")){
+                    $(".menu").removeClass("active");
+                    $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>")
+                } else {
+                    $(".menu").addClass("active");
+                    $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>")
+                }
+            });
+        });
+    </script>
+<main>
+<form action="#">
+    <p><label>Username</label>
+     <input type="email" name="username">   
+    </p>
+    <p><label>Password</label> <input type="text" name="Password"></p>
+    <p> <label> Re-enter Password</label> <input type="text" name="Password"></p>
+
+    <p><input type="checkbox" id="read_terms"> <label> I have read the terms and conditions</label></p>
+    <br>
+    <button>Create Account</button>
+</form>
+</main>
+
+</body>
+</html>
