@@ -99,9 +99,9 @@ nav{
 
 div.footer{
         background-color: #0F135E;
-        margin: 0 auto;
         margin-top: auto;
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
@@ -115,7 +115,6 @@ div.footer{
 div.footer2{
         display: none;
         background-color: #0F135E;
-        margin-top: auto;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
