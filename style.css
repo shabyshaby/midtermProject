@@ -100,11 +100,11 @@ nav{
 div.footer{
         background-color: #0F135E;
         margin: 0 auto;
+        margin-top: auto;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        position: absolute;
         text-align: center;
         bottom: 0;
         left: 0;
@@ -149,6 +149,8 @@ body{
         background-color: white;
         margin-left: 20px;
         min-height: 100vh;
+        display: flex;
+        flex-direction: column;
 }
 
 
